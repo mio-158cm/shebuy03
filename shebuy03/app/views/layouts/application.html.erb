@@ -19,7 +19,9 @@
        <% if flash[:alert] %>
          <div class="alert alert-danger"><%= flash[:alert] %></div>
        <% end %>
-       <%= yield %>
+      <div class="container">
+        <%= yield %>
+      </div>
        <%= render 'partial/footer' %>
     </div>
   </body>
