@@ -11,10 +11,10 @@ class PostsController < ApplicationController
     if @post.photos.present?
       @post.save
       redirect_to root_path
-      flash[:notice] = "投稿が保存されました"
+      flash[:notice] = "投稿完了！"
     else
       redirect_to root_path
-      flash[:alert] = "投稿に失敗しました"
+      flash[:alert] = "もう１回投稿してください"
     end
   end
 
@@ -27,9 +27,9 @@ class PostsController < ApplicationController
 
   def destroy
     if @post.user == current_user
-      flash[:notice] = "投稿が削除されました" if @post.destroy
+      flash[:notice] = "投稿を消しました" if @post.destroy
     else
-      flash[:alert] = "投稿の削除に失敗しました"
+      flash[:alert] = "もう１回削除してください"
     end
     redirect_to root_path
   end

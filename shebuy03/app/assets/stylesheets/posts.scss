@@ -2,14 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .post-profile-icon {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  border-radius: 30%;
   margin-right: 10px;
 }
 
 .card-wrap {
-  margin: 40px 0px;
+  margin: 10px 0px;
+}
+
+.poststyle{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .no-text-decoration:hover {

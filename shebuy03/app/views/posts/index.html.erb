@@ -1,5 +1,6 @@
+<div class="poststyle">
 <% @posts.each do |post| %>
-  <div class="col-md-8 col-md-2 mx-auto">
+  <div class="col-md-4 col-md-1">
     <div class="card-wrap">
       <div class="card">
         <div class="card-header align-items-center d-flex">
@@ -43,14 +44,12 @@
             <div id="comment-post-<%= post.id.to_s %>">
               <%= render 'comment_list', { post: post } %>
             </div>
-            <%= link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post),
-              class: "light-color post-time no-text-decoration" %>
             <hr>
             <div class="row actions" id="comment-form-post-<%= post.id.to_s %>">
               <%= form_with model: [post, Comment.new], class: "w-100" do |f| %>
                 <%= f.hidden_field :user_id, value: current_user.id %>
                 <%= f.hidden_field :post_id, value: post.id %>
-                <%= f.text_field :comment, class: "form-control comment-input border-0", placeholder: "コメント ...", autocomplete: :off %>
+                <%= f.text_field :comment, class: "form-control comment-input border-0", placeholder: "コメント...", autocomplete: :off %>
               <% end %>
             </div>
           </div>
@@ -59,3 +58,4 @@
     </div>
   </div>
 <% end %>
+</div>
