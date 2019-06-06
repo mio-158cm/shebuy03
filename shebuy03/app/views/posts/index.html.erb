@@ -1,8 +1,33 @@
 <div class="poststyle">
+<div class="bounce">
+<span class="letter">Y</span>
+<span class="letter">O</span>
+<span class="letter">U</span>
+<span class="letter">B</span>
+<span class="letter">U</span>
+<span class="letter">Y</span>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+  $('#bg01').mouseover(function () {
+    $(this).fadeOut("slow");
+  });
+
+});
+</script>
+
+
+
+
+
+
 <% @posts.each do |post| %>
   <div class="col-md-4 col-md-1">
     <div class="card-wrap">
-      <div class="card">
+      <div class="card bg-dark text-white">
         <div class="card-header align-items-center d-flex">
           <%= link_to user_path(post.user), class: "no-text-decoration" do %>
             <%= image_tag avatar_url(post.user), class: "post-profile-icon" %>
@@ -49,7 +74,7 @@
               <%= form_with model: [post, Comment.new], class: "w-100" do |f| %>
                 <%= f.hidden_field :user_id, value: current_user.id %>
                 <%= f.hidden_field :post_id, value: post.id %>
-                <%= f.text_field :comment, class: "form-control comment-input border-0", placeholder: "コメント...", autocomplete: :off %>
+                <%= f.text_field :comment, class: "form-control comment-input border-0", placeholder: "Please comment", autocomplete: :off %>
               <% end %>
             </div>
           </div>
