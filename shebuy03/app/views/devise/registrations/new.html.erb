@@ -1,14 +1,33 @@
-<script type="text/javascript">
-  $(document).ready(function() {
-    $("fade").text("jQuery稼働テスト(稼働中)");
-  });
-</script>
-<p class="fade">こんにちは</p>
+
 
 <div class="main">
      <h2 class="logo-img mx-auto"></h2>
     <div class="form-group text-center">
-    <p>新しいお客様ですね</p>
+ <%# <script type="text/javascript">
+  $(document).ready(function() {
+    $("fade").text("jQuery稼働テスト(稼働中)");
+  });
+</script>
+<p class="fade">新しいお客様ですね</p> %>
+
+
+
+
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="js/t.min.js"></script>
+
+
+<p class="type">新しいお客様ですね</p>
+
+<script>
+// 実装コード
+$(document).ready(function(){
+  $(".type").t()
+});
+</script>
+
+
+
   </div>
   <%# <div class="card devise-card"> %>
     <div class="form-wrap">

@@ -11,3 +11,14 @@
 .edit-profile-wrapper {
   margin-top: 60px;
 }
+
+
+
+.translate {
+  width:80px;
+  height:80px;
+  transition-duration: 1s;
+  background:rgba(18,132,129,0.8);
+}
+
+.translate:hover { transform:translate(50px,50px); }
